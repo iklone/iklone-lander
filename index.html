@@ -1,0 +1,80 @@
+<head>
+    <title>iklone</title>
+    <link rel = "stylesheet" type = "text/css" href = "./main.css">
+    <link rel="icon" type="image/png" href="./favicon.png"/>
+</head>
+<body>
+    <div id="header">
+        <img id="avatar" src="./avatar.png">
+        <h1><a href="." class="blankLink">James Thackway</a></h1>
+        <p>Web developer, blogger and digital priest</p>
+        <button onclick="window.location.href='http://blog.iklone.org';">Blog</button>
+        <button id="contactBtn">Contact</button>
+    </div>
+
+    <div id="body">
+        <p>Hello reader,</p>
+        <p><b>I am James Thackway, a computer science graduate from the University of Nottingham. I am primarily a web designer and developer looking for work in front end web development, having previously worked freelance in website development and maintenance. I think there is more to web design than pure functionality.</b></p>
+        <p>In my free time I work on programming projects (see my <a href="https://github.com/iklone">github</a>) and write articles on otaku media (see my blogs below).</p>
+        <p>This site is a landing page to link together all of my projects and accounts online. If you would like to contact me please see my contact page <a onclick="" href="#">here</a>.</p>
+    
+        <div class="list">
+            <h2>Accounts:</h2>
+            <ul>
+                <li><a href="https://github.com/iklone">Github</a> for source code.</li>
+                <li><a href="https://twitter.com/iklone">Twitter</a> for microblogging.</li>
+                <li><a href="https://myanimelist.net/profile/iklone">My Anime List</a> for anime/manga.</li>
+                <li><a href="https://www.linkedin.com/in/jamesthackway">LinkedIn</a> for work.</li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h2>Projects:</h2>
+            <ul>
+                <li><a href="http://blog.iklone.org">A Prismatic Fantasy</a>: My current otaku blog built a retro-futurist style. I write on "otaku": obsessive media culture.</li>
+                <li><a href="http://hayasugi.iklone.org">Hayasugi</a>: A work-in-progress micro reviewing website for anime and manga.</li>
+                <li><a href="https://www.youtube.com/channel/UCVl1JjL_RiMKz2So8zUPCyQ">The Very Melon Anime Podcast</a>: Otaku podcast with my friend and I.</li>
+                <li><a href="https://www.dropbox.com/sh/myjzqhs3oz98hmf/AAAIMZ3tUJXlnY08IPXOgkera?dl=0">The Anisoc Zine</a>: A annual otaku magazine I help produce with my local anime society. I lead issue #10.</li>
+                <li><a href="https://www.blogger.com/profile/05726480952560360312">The Psychoframe</a>: My previous otaku blog. Writing on symbols and narrative in anime.</li>
+                <li><a href="https://www.blogger.com/profile/05726480952560360312">Old Blogs</a>: Backup versions for all of my old blogs, now hosted through blogspot. Includes <i>Overly Friendly Squid</i>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Reserved 2020 James Thackway and iklone</p>
+    </div>
+
+    <div id="inputModal" class="modal">
+        <div class="modalContent">
+            <div class="modalHeader">
+                <span id="modalClose" class="close">&times;</span>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="modalBody">
+                <p>To contact me for professional or urgent matters, please email me at <i>jamesthackway(AT)hotmail.co.uk</i></p>
+                <p>To contact me for personal or otaku-based matters, either send me a message on <a href="https://twitter.com/iklone">Twitter</a> or on <a href="https://myanimelist.net/profile/iklone">My Anime List</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("inputModal");
+        var btn = document.getElementById("contactBtn");
+        var span = document.getElementById("modalClose");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
